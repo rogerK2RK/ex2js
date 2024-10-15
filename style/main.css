@@ -3,7 +3,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
-h1 {
+h1, .checkboxes {
     text-align: center;
     width: 100%;
 }
