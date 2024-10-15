@@ -1,5 +1,6 @@
 import { Rectangle } from './classes/Rectangle.js';
 import { Circle } from './classes/Circle.js';
+import { getRandomNumber, getRandomColor } from './utils/random.js';
 
 
 //DOM de CANVA et son contexte
@@ -24,4 +25,19 @@ rect2.draw(context);
 circ1.draw(context);
 circ2.draw(context);
 
+// Ajout d'un circle au click
+canvas.addEventListener('click', (e) => {
+    console.log("Hello Roger");
 
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const randomRadius = getRandomNumber(10, 120);
+    const randomColor = getRandomColor();
+
+    const newCircle = new Circle(x, y, randomRadius, randomColor);
+
+    newCircle.draw(context);
+
+});
