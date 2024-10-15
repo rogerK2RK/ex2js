@@ -8,6 +8,13 @@ h1 {
     width: 100%;
 }
 
+label {
+    width: 45%;
+}
+#cirlce {
+    margin-right: 5%;
+}
+
 canvas {
     border: 2px solid black;
     display: block;
